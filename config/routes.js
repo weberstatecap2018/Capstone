@@ -3,5 +3,5 @@ module.exports = function(app){
       app.locals.loggedIn = req.session && req.session.userId ? true : false;
       next();
     });
-    app.use('/', require('../app/controllers/index.controller'));
+    app.use('/', require('../Backend/controllers/index.controller'));
   }
