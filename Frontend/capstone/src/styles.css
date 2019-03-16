@@ -1,2 +1,64 @@
 /* You can add global styles to this file, and also import other style files */
+<<<<<<< HEAD
 /* css */
+=======
+body {
+    overflow-x: hidden;
+    
+}
+
+.row {
+    padding: 30px;
+}
+
+.row2 {
+    padding: 0;
+}
+
+.banner {
+    background-image: url('./assets/weber-state-u-990x350.jpg');
+    background-size: cover;
+    height: 300px;
+}
+
+.colorBar {
+    background-color: #492365;
+    color: white;
+    height: 250px;
+    padding-top: 70px;
+    
+}
+
+.colorBar2 {
+    background-color: #492365;
+    color: white;
+    height: 400px;
+    padding-top: 70px;
+}
+
+/*
+.colorBar i {
+    font-size: 48px;
+}*/
+
+.underline {
+    border-bottom: #492365 1px solid;
+}
+
+.underline2 {
+    border-bottom: white 1px solid;
+}
+
+.sections {
+    height: 500px;
+}
+
+.employer {
+    background-image: linear-gradient(rgba(51, 51, 51, .6), rgba(51, 51, 51, .6)), url('./assets/business-3152586_640.jpg');
+    background-size: cover;
+    height: 300px;
+    position: relative;
+    background-repeat: no-repeat;
+    color: white
+}
+>>>>>>> 5006b37ffa010fdddb9b66adbfb532ba793f6bad
