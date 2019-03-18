@@ -1,5 +1,5 @@
 let mongoose = require('mongoose');
-let dbURI = '';
+let dbURI = 'mongodb://anthonyreininger:Test1234!@ds117423.mlab.com:17423/database1';
 if (process.env.NODE_ENV === 'production') {
     dbURI = process.env.MONGODB_URI;
 }
