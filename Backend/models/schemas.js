@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
+const bcrypt = require("bcrypt");
 const Schema = mongoose.Schema;
-
 
 let userSchema = new Schema({
     username: {
@@ -51,8 +51,21 @@ let userSchema = new Schema({
     });
   });
 
+let commentSchema = new Schema ({
+    user: String,
+    body: String,
+    posted_at: Date
+});
 
-let postSchema = new Schema ({
+commentSchema.pre('save', function(next){
+    if(this.isNew){
+        this.posted_at = new Date();
+    }
+
+    next();
+});
+
+let postForumSchema = new Schema ({
     title: {type: String, required: "Title is required.", 
         minlength: [20, "Title is too short; must be at least 20 characters long."]},
     author: {type: String, required: true},
@@ -75,4 +88,4 @@ postSchema.pre('save', function(next){
 });
 
 module.exports.User = mongoose.model("User", userSchema);
-module.exports.Post = mongoose.model("Post", postSchema);
+module.exports.PostForum = mongoose.model("PostForum", postForumSchema);
