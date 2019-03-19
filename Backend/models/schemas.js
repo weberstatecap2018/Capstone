@@ -51,6 +51,27 @@ let userSchema = new Schema({
     });
   });
 
+  let jobsSchema = new Schema ({
+    title: {type: String, required: "Title is required.", 
+        minlength: [20, "Title is too short; must be at least 20 characters long."]},
+    company_name: {type: String, required: true},
+    pay:{type: String, required: true},
+    posted_at: Date,
+    updated_at: Date,
+    body: {type: String, required: true}
+})
+
+jobsSchema.pre('save', function(next){
+    if(this.isNew){
+        this.posted_at = new Date();
+        this.updated_at = new Date();
+    }else{
+        this.updated_at = new Date();
+    }
+
+    next();
+});
+
 let commentSchema = new Schema ({
     user: String,
     body: String,
@@ -87,5 +108,6 @@ postSchema.pre('save', function(next){
     next();
 });
 
+module.exports.Jobs = mongoose.model("Jobs", userSchema);
 module.exports.User = mongoose.model("User", userSchema);
 module.exports.PostForum = mongoose.model("PostForum", postForumSchema);
