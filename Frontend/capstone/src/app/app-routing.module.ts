@@ -6,9 +6,9 @@ import { QuestionForumComponent } from './question-forum/question-forum.componen
 
 const routes: Routes = [ 
 { path: '', redirectTo: '/home', pathMatch: 'full' },
-{path: '/home/employer', component: EmployerComponent},
-{path: '/home/job_listing', component: JobListingComponent},
-{path: '/home/question_forum', component: QuestionForumComponent}
+{path: 'home/employer', component: EmployerComponent},
+{path: 'home/job_listing', component: JobListingComponent},
+{path: 'home/question_forum', component: QuestionForumComponent}
 ];
 
 @NgModule({
