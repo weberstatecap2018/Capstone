@@ -9,6 +9,7 @@ var sassMiddleware = require('node-sass-middleware');
 require("./config/db.js");
 
 var app = express();
+var cors = require('cors');
 
 // view helpers
 app.locals.formatDate = require("date-fns/format");
@@ -20,6 +21,7 @@ app.set('view engine', 'ejs');
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(cors());
 app.use(cookieParser());
 app.use(session({
   secret: 'shshsh it is a secret',
