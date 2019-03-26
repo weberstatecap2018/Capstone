@@ -33,7 +33,7 @@ git log
 
 How to setup your own local branch for making changes
 
-This creates a new branch off of master branch
+This creates a new branch off of master branch (This is only temporary. You will delete after your fix/change is working)
 
 ```
 git branch branchName
@@ -45,13 +45,8 @@ To move into your new branch
 git checkout branchName
 ```
 
-Set up the upstream for your branch You will have to run this for your first push from your branch
+Now you can start making changes and committing (dont push till you are all done)
 
-```
-git push --set-upstream origin Conners-branch
-```
-
-Now your ready to make changes and start adding your changes.
 When done, you are ready to commit your branch. It may have you setup your upstream which is shown above.
 
 ```
@@ -60,13 +55,17 @@ git commit -m"msg here"
 git push
 ```
 
-If you would rather stay in the master branch. You must do the following. IN ORDER!
+You might have to set up the upstream for your branch.
 
 ```
-git add filepathHere
-git commit -m"your msg here."
-git pull
-git push
+git push --set-upstream origin Conners-branch
+```
+
+Once done here. You will have to go into Github. Find your branch. And request a merge pull request to merge your changes into master.
+
+Now you can delete your local branch
+```
+git branch -d branchName
 ```
 
 ## Deployment
