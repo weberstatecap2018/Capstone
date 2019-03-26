@@ -4,6 +4,8 @@ Using Mongo, Express, Angular, and Node. Our team is creating a full stack appli
 
 ## Getting Started
 
+Please read [git team flow](https://jameschambers.co/writing/git-team-workflow-cheatsheet/) for a visual aid on how branching off of master works.
+
 Navigate to a directory where you want your project to be located. Clone the repo and run git clone "repo link here" in your command line. This will create the folder and all packages being used on this project.
 
 ### Installing
