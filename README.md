@@ -57,7 +57,7 @@ git checkout branchName
 
 Now you can start making changes and committing (dont push till you are all done)
 
-When done, you are ready to commit your branch. It may have you setup your upstream which is shown above.
+When done, you are ready to commit your branch to git.
 
 ```
 git add .
