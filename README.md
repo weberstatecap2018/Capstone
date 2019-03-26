@@ -31,6 +31,16 @@ git log
 
 ## How to commit with Git on the command line
 
+### Make sure your master is up to date before branching off to your own local branch
+
+Todo this, run the following command in the master branch (Being in the root directory of our capstone folder)
+
+```
+git pull
+```
+
+Now you are ready to branch off and start adding changes for the app.
+
 How to setup your own local branch for making changes
 
 This creates a new branch off of master branch (This is only temporary. You will delete after your fix/change is working)
@@ -52,18 +62,21 @@ When done, you are ready to commit your branch. It may have you setup your upstr
 ```
 git add .
 git commit -m"msg here"
-git push
-```
-
-You might have to set up the upstream for your branch.
-
-```
-git push --set-upstream origin Conners-branch
+git push --set-upstream origin branchName
 ```
 
 Once done here. You will have to go into Github. Find your branch. And request a merge pull request to merge your changes into master.
 
-Now you can delete your local branch
+## Now you can delete your local branch
+
+Deleting the remote branch from git
+
+```
+git push origin :branchName
+```
+
+Deleting local branch (can't be in the branch you are deleting. Make sure you are back in master branch).
+
 ```
 git branch -d branchName
 ```
