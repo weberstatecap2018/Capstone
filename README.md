@@ -8,8 +8,6 @@ Navigate to a directory where you want your project to be located. Clone the rep
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
-
 Run the following command in the Capstone root directory to install all packages being used
 
 ```
@@ -22,23 +20,51 @@ Navigate to /Frontend/Capstone and run the following command to get all packages
 npm install
 ```
 
+## Checking the commit history in the command line
+
+Run this command if you want to see what other people have committed.
+```
+git log
+```
 
 ## How to commit with Git on the command line
 
-The following commands are required to push your changes
+How to setup your own local branch for making changes
+
+This creates a new branch off of master branch
+
+```
+git branch branchName
+```
+
+To move into your new branch
+
+```
+git checkout branchName
+```
+
+Set up the upstream for your branch You will have to run this for your first push from your branch
+
+```
+git push --set-upstream origin Conners-branch
+```
+
+Now your ready to make changes and start adding your changes.
+When done, you are ready to commit your branch. It may have you setup your upstream which is shown above.
+
+```
+git add .
+git commit -m"msg here"
+git push
+```
+
+If you would rather stay in the master branch. You must do the following. IN ORDER!
 
 ```
 git add filepathHere
 git commit -m"your msg here."
+git pull
 git push
-```
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
 ```
 
 ## Deployment
