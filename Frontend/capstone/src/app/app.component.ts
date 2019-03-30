@@ -7,6 +7,10 @@ import { Component } from '@angular/core';
     color: #fff !important;
   
   }
+  .activate   {
+    color: #492365 !important;
+    border-bottom: #492365 solid 1px;
+  }
 `],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']

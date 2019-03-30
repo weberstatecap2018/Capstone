@@ -2,22 +2,38 @@
 
 <!--   <div class="container-fluid">-->
     
-  
-    <ul class="nav">
-      <li class="nav-item">
-        <a class="nav-link active" href="#">Jobs</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Forum
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-      </li>
-    </ul>
+    <nav class="navbar top ">
+        <span class="navbar-text">
+            <p>This is a test | <a href="">Login</a></p>
+          </span>
+      </nav> 
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+   
+        <a routerLink="/portfolio" > <img src="./assets/mylogo8.png" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+         
+          <span class="navbar-text">
+            <ul class="navbar-nav mr-auto my-2 my-lg-0">
+              <li class="topnav home nav-item" >
+                <a class="nav-link"  routerLink="/home" routerLinkActive="activate"
+                [routerLinkActiveOptions]="{ exact: true }" >Home </a>
+              </li>
+              <li class="topnav nav-item">
+              <a class="nav-link"  routerLink="/home/employer" routerLinkActive="activate">Employer</a>
+              </li>
+              <li class="topnav nav-item">
+                <a class="nav-link" routerLink="/home/job_listing" routerLinkActive="activate">Jobs</a>
+              </li>
+              <li class="topnav nav-item">
+                  <a class="nav-link" routerLink="/home/question_forum" routerLinkActive="activate">Questions</a>
+                </li>
+            </ul>
+          </span>
+        </div>
+      </nav>
    
    <div class="banner"></div>
    
